@@ -23,3 +23,10 @@ ldconfig
 
 [httpd.txt](https://github.com/bigsol/How-to-Enable-mod_brotli-Brotli-Compression-on-Apache-Server./files/7497056/httpd.txt)
 ![image](https://user-images.githubusercontent.com/51197053/140745881-1d3f9258-91cf-4526-a09d-f8c1a4697721.png)
+
+<p>to enable brotli for all of your sites remove “#” before from AddOutputFilterByType</p>
+<p>** BrotliCompressionQuality 6 for better compression you can select value 0-11 i’ll recommend value 6</p>
+
+and 
+<p>sudo systemctl restart httpd</p>
+
