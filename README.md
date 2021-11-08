@@ -19,13 +19,13 @@ The mod_brotli module provides the BROTLI_COMPRESS output filter that allows out
 grep "/usr/local/lib/" /etc/ld.so.conf || echo "/usr/local/lib/" >> /etc/ld.so.conf<br>
 ldconfig
 
-<p>Now add this line to /etc/httpd/conf/httpd.conf :</p>
+<p><mark>Now</mark> add this line to /etc/httpd/conf/httpd.conf :</p>
 
-LoadModule brotli_module modules/mod_brotli.so<br>
-<IfModule mod_brotli.c><br>
-BrotliCompressionQuality 6<br>
-<br>
-# To enable globally<br> 
+
+LoadModule brotli_module modules/mod_brotli.so
+  <IfModule mod_brotli.c><br>
+    BrotliCompressionQuality 6<br>
+#To enable globally'<br> 
 #AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript application/json application/x-font-ttf application/vnd.ms-fontobject image/x-icon<br>
 <br>
 BrotliFilterNote Input brotli_input_info<br>
@@ -41,4 +41,4 @@ SetEnvIfNoCase Request_URI \<br>
 #Make sure proxies don't deliver the wrong content<br>
 Header append Vary User-Agent env=!dont-vary<br>
 </IfModule><br>
-<br>
+
