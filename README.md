@@ -22,4 +22,4 @@ ldconfig
 <p>Now add this line to /etc/httpd/conf/httpd.conf :</p>
 
 [httpd.txt](https://github.com/bigsol/How-to-Enable-mod_brotli-Brotli-Compression-on-Apache-Server./files/7497056/httpd.txt)
-![WinSCP_7Zg30O8ddp](https://user-images.githubusercontent.com/51197053/140745653-36bb2bfb-4b37-4dc3-9205-3367523fc3cd.png)
+![image](https://user-images.githubusercontent.com/51197053/140745881-1d3f9258-91cf-4526-a09d-f8c1a4697721.png)
