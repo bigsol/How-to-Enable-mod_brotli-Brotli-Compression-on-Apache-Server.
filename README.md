@@ -30,3 +30,4 @@ ldconfig
 and 
 <p>sudo systemctl restart httpd</p>
 
+![image](https://user-images.githubusercontent.com/51197053/140746627-0b6e2053-bccc-4db8-859f-94be0942ca33.png)
