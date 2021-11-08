@@ -14,3 +14,9 @@ The mod_brotli module provides the BROTLI_COMPRESS output filter that allows out
 <li>git checkout v1.0</li>
 <li>./configure-cmake</li>
 <li>make && make install</li>
+<p>Adding path for dependencies files:</p>
+
+grep "/usr/local/lib/" /etc/ld.so.conf || echo "/usr/local/lib/" >> /etc/ld.so.conf<br>
+ldconfig
+
+<p>Now add this line to /etc/httpd/conf/httpd.conf :</p>
