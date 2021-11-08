@@ -22,6 +22,7 @@ ldconfig
 <p>Now add this line to /etc/httpd/conf/httpd.conf :</p>
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 LoadModule brotli_module modules/mod_brotli.so
 <IfModule mod_brotli.c><br>
 BrotliCompressionQuality 6<br>
@@ -42,4 +43,4 @@ SetEnvIfNoCase Request_URI \<br>
 #Make sure proxies don't deliver the wrong content<br>
 Header append Vary User-Agent env=!dont-vary<br>
 </IfModule><br>
-
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
