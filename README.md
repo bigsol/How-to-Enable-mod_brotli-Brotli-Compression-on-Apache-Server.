@@ -24,7 +24,7 @@ ldconfig
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 LoadModule brotli_module modules/mod_brotli.so
-<IfModule mod_brotli.c><br>
+'<IfModule mod_brotli.c>'<br>
 BrotliCompressionQuality 6<br>
   <br>
 #To enable globally'<br> 
