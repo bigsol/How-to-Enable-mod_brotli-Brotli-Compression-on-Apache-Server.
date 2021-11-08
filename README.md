@@ -8,9 +8,9 @@ The mod_brotli module provides the BROTLI_COMPRESS output filter that allows out
 
 <p>Install Brotli on your server</p>
 
-<text>yum install pcre-devel cmake -ycd usr/local/src
-git clone https://github.com/google/brotli.git
-cd brotli
-git checkout v1.0
-./configure-cmake
-make && make install</text>
+<li>yum install pcre-devel cmake -ycd usr/local/src</li>
+<li>git clone https://github.com/google/brotli.git</li>
+<li>cd brotli</li>
+<li>git checkout v1.0</li>
+<li>./configure-cmake</li>
+<li>make && make install</li>
