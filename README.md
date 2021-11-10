@@ -54,7 +54,11 @@ Header append Vary User-Agent env=!dont-vary
 <p>to enable brotli for all of your sites remove “#” before from AddOutputFilterByType</p>
 <p>** BrotliCompressionQuality 6 for better compression you can select value 0-11 i’ll recommend value 6</p>
 
-and 
-<p>sudo systemctl restart httpd</p>
+and
 
+```
+sudo systemctl restart httpd
+```
+
+<p>and of course check that it works in your Chrome</p>
 ![image](https://user-images.githubusercontent.com/51197053/140746627-0b6e2053-bccc-4db8-859f-94be0942ca33.png)
