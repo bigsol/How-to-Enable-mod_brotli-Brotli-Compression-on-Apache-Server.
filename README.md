@@ -22,7 +22,7 @@ The mod_brotli module provides the BROTLI_COMPRESS output filter that allows out
 <p>Adding path for dependencies files:</p>
 
 ```
-grep "/usr/local/lib/" /etc/ld.so.conf || echo "/usr/local/lib/" >> /etc/ld.so.conf<br>
+grep "/usr/local/lib/" /etc/ld.so.conf || echo "/usr/local/lib/" >> /etc/ld.so.conf
 ldconfig
 ```
 
