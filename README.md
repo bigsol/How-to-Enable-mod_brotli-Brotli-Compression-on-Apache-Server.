@@ -21,8 +21,28 @@ ldconfig
 
 <p>Now add this line to /etc/httpd/conf/httpd.conf :</p>
 
-[httpd.txt](https://github.com/bigsol/How-to-Enable-mod_brotli-Brotli-Compression-on-Apache-Server./files/7497056/httpd.txt)
-![image](https://user-images.githubusercontent.com/51197053/140745881-1d3f9258-91cf-4526-a09d-f8c1a4697721.png)
+```
+LoadModule brotli_module modules/mod_brotli.so
+<IfModule mod_brotli.c>
+BrotliCompressionQuality 6
+
+#To enable globally' 
+#AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript application/x-javascript application/javascript application/json application/x-font-ttf application/vnd.ms-fontobject image/x-icon
+
+BrotliFilterNote Input brotli_input_info
+BrotliFilterNote Output brotli_output_info
+BrotliFilterNote Ratio brotli_ratio_info
+LogFormat '"%r" %{brotli_output_info}n/%{brotli_input_info}n (%{brotli_ratio_info}n%%)' brotli
+CustomLog "logs/brotli_log" brotli
+
+#Don't compress content which is already compressed
+SetEnvIfNoCase Request_URI \
+\.(gif|jpe?g|png|swf|woff|woff2) no-brotli dont-vary
+
+#Make sure proxies don't deliver the wrong content
+Header append Vary User-Agent env=!dont-vary
+</IfModule>
+```
 
 <p>to enable brotli for all of your sites remove “#” before from AddOutputFilterByType</p>
 <p>** BrotliCompressionQuality 6 for better compression you can select value 0-11 i’ll recommend value 6</p>
